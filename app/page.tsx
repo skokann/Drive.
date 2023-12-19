@@ -1,9 +1,16 @@
+"use client";
+import { ClerkProvider } from "@clerk/nextjs";
+import Hero from "./components/Hero";
+import Navbar from "./components/Nav";
+import { NextUIProvider } from "@nextui-org/react";
+
 export default function Home() {
   return (
     <>
-      <main className="max-w-7xl h-screen">
-        <h1 className="font-bold">Drive.</h1>
-      </main>
+      <NextUIProvider>
+        <Navbar />
+        <Hero />
+      </NextUIProvider>
     </>
   );
 }
